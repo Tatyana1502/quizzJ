@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Script -->
+    <script defer src="./assets/java/javascript.js"></script>
+
+    <!-- Titre -->
+    <title>Culture quiz</title>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <!-- En-tête -->
+      <header>
+        <h1 class="title">Culture quiz</h1>
+      </header>
+
+      <!-- Section question-->
+      <section class="question-container">
+        <p id="question"></p>
+        <label for="radio1"> ghgbc<input type="radio" id="radio1" name="choix" value="radio1" /></label>
+        <label for="radio2"> <input type="radio" id="radio2" name="choix" value="radio2"   /></label>
+        <label for="radio3"> <input type="radio" id="radio3" name="choix" value="radio3" /></label>
+        <label for="radio4"> <input type="radio" id="radio4" name="choix" value="radio4"  /></label>
+        <!-- <ul id="answers"></ul> -->
+      </section>
+      <button id="Chercher">Chercher</button>
+
+      <!-- Section résultat-->
+      <section class="result-container">
+        <p>Votre score est de: <span id="score">0</span>/4</p>
+      </section>
+    </div>
+  </body>
+</html>
