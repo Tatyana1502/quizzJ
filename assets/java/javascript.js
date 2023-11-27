@@ -1,13 +1,3 @@
-
-
-
-
-
-
-
-
-
-
 /*************************/
 /*       Questions       */
 /*************************/
@@ -67,51 +57,66 @@ const questions = [
   document.addEventListener("DOMContentLoaded", () => {
     
   // démarrage du quizz
-    
-  });
+  function calculateScore() {
+    reponse.addEventListener("click",(Event) => {
+      console.log(Event.target.innerText);
+      if (Event.target.innerText === questions[index].correctAnswerIndex) {
+        index++;
+        console.log("score ", correctAnswerIndex)
+      }
+    })
+    // let Score = 0;
+    // let repons = document.getElementsByTagName("li");
+    //   for (let ind = 0; ind <repons.length; ind++){
+    //      let repon = repons[ind];
+    //     let options = repon.getElementsByTagName("correctAnswerIndex");
+    //     for (let j = 0; j < options.length; j++) {
+    //     let option = options[j];
+    //      if (option.checked && option.value == questions[index].correctAnswerIndex.value) {
+    //         Score++;
+    //        break;
+    //      }
+    //    }
 
-// for (questions == 0, questions >= 3, index++) {
-    
+    //    }
+     }
     console.log("questions: ", questions);
-    document.getElementById("#question");
-    let Variable = document.getElementById("question").value;
-    document.querySelector("#question").innerText = questions[0].value;
-    // document.innerText = Variable ;
-//     let radioElement;
-// radioElement = document.getElementById('radioElement');
-document.querySelector("button").addEventListener("click", () => {
+    console.log("question: ", questions[0]);    
+    console.log("answers: ", questions[0].answers[0]);
+    console.log("answers: ", questions[0].answers[1]);
+    console.log("answers: ", questions[0].answers[2]);
+    console.log("answers: ", questions[0].answers[3]);
 
-document.querySelectorAll("input[type='radio']").forEach(async radio => {
-     radio.addEventListener("change", async () => {
-    //  document.querySelector("radio1").innerHTML = "questions.answers" + questions.answers;
-    //  if (questions.question == 0) {
-        if (correctAnswerIndex.value == true){
-            console.log("correct: ", answers);
-            // console.log(score
-            
+   let index = 0;
+    for (index = 0; index < questions.length; index++){
+      // document.querySelector("#question").innerHTML = questions[0].question;
+      // questions.innerText = questions[index].question;
+         for (let i = 0; i < questions[index].answers.length; i++) {    
+          document.querySelector("#question").innerHTML = questions[index].question;
+              let reponse = document.getElementById("answers");
+             let answer = document.createElement("li");
+              answer.classList.add("answer");
+             answer.innerText = questions[index].answers[i];
+              console.log("answers: ", answer);
+              reponse.appendChild(answer);
+              // questions.appendChild(answer);
+              
+              // index++;
+          
+         
+calculateScore();
+// index++;
+         }
+        //  index++;
         }
-        //  if (radio.value == "nom") {
-        //      console.log("NOM");
-        //     //  await listPokemons ();
-        //  } 
-         else {
-             console.log("incorrect: ", answers);
-            //  await listElements ();
-         }  
-        // }
-    })        
- });
-})
-// function correct {
-//     for (questions.question == 0) {
-//         let correctAnswerIndex = 2;
-//     }
-// }
-//     if (questions == 0) {
-//         if (answers == 2){
-//             console.log("correct: ", answers);
-//             // console.log(score
-            
-//         }
-// }
-// }
+   
+        // let resultmessage = "Votre result " + Score;
+  // document.getElementById(".result-container").innerHTML = resultmessage;
+      
+
+      
+   
+   })   
+   
+   
+
